@@ -22,4 +22,4 @@ for (1) continuous building if you change anything in the files, (2) running a l
 
 If you have rvm or rbenv installed, you probably notice the `.ruby-gemset` and `.ruby-version` files. These are there for opinion reasons.
 
-
+For writing *UML*, the [jekyll-plantuml plugin](https://github.com/yegor256/jekyll-plantuml) is installed. See more information on plantuml [here](http://plantuml.com/class-diagram)

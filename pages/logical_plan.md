@@ -4,7 +4,6 @@ layout: default
 
 # Logical Query Plans
 
-
 A logical plan is a rooted n-way plan which consists of operators.
 Each operator consumes n streams and emits 1 stream.
 
