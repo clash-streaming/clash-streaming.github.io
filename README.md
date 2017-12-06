@@ -7,13 +7,13 @@ In order to build the documentation, you need [jekyll](https://jekyllrb.com/). I
     $ gem install bundler
     $ bundle install
 
-Generate the page into the `_page` directory with
+Generate the page into the `_site` directory with
 
-    $ jekyll b
+    $ bundle exec jekyll b
 
 When you are writing documentation and want to check the output, use
 
-    $ jekyll liveserve
+    $ bundle exec jekyll liveserve
 
 for (1) continuous building if you change anything in the files, (2) running a local webserver that serves the generated HTML, and (3) sending [livereload](http://livereload.com/) signals to your browser of choice.
 
