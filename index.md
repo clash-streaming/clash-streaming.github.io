@@ -28,7 +28,9 @@ So now a physical graph is given (the one currently used for answering the query
 * [data-characteristics](https://git.cs.uni-kl.de/clash/data-characteristics) Everything related to estimation of data characteristics (rate, selectivity, etc.)
 * [physical-graph](https://git.cs.uni-kl.de/clash/physical-graph) The core data structure that is the result of optimization and that describes data flow and materialization.
 * [optimizer](https://git.cs.uni-kl.de/clash/optimizer) Different techniques for optimization are collected here, at most MultiStream operator optimization as well as join tree construction.
-* [clash-storm](https://git.cs.uni-kl.de/clash/clash-storm) provides translation from a physical graph to the clash storms 
+* [clash-storm](https://git.cs.uni-kl.de/clash/clash-storm) provides translation from a physical graph to the clash storms
+
+![Structure of the CLASH projects]({{ "/project_structure.png" | absolute_url }})
 
 ## Support
 
