@@ -7,6 +7,8 @@ In order to build the documentation, you need [jekyll](https://jekyllrb.com/). I
     $ gem install bundler
     $ bundle install
 
+Also you need [plantuml](http://plantuml.com/) for rendering diagrams. Install it via `brew install plantuml` (OS X), or see [here](https://github.com/yegor256/jekyll-plantuml#install-plantumljar).
+
 Generate the page into the `_site` directory with
 
     $ bundle exec jekyll b
@@ -23,3 +25,4 @@ for (1) continuous building if you change anything in the files, (2) running a l
 If you have rvm or rbenv installed, you probably notice the `.ruby-gemset` and `.ruby-version` files. These are there for opinion reasons.
 
 For writing *UML*, the [jekyll-plantuml plugin](https://github.com/yegor256/jekyll-plantuml) is installed. See more information on plantuml [here](http://plantuml.com/class-diagram)
+
