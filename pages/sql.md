@@ -1,9 +1,7 @@
 ---
 layout: default
-title: SQL
+title: CLASH's SQL Dialect
 ---
-
-# CLASH's SQL Dialect
 
 We support queries of type
 

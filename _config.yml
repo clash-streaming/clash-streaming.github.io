@@ -16,8 +16,8 @@
 title: Clash
 description: >-
   Clash is a distributed system for real time data analysis
-baseurl: ''
-url: 'todo.uni-kl.de'
+baseurl: '/clash-doc/'
+url: 'https://dbis-ci.cs.uni-kl.de'
 
 # Build settings
 markdown: kramdown
