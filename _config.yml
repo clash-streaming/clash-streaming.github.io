@@ -22,8 +22,10 @@ url: 'todo.uni-kl.de'
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
   - jekyll-plantuml
+
+sass:
+  style: compact
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

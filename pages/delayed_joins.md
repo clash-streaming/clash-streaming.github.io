@@ -1,8 +1,7 @@
 ---
 layout: default
+title: Out-of-Order Join Execution
 ---
-
-# Out of order join execution
 
 Given a store $R_i$ with arriving probe tuples $s_1, \dots, s_n$.
 The timestamps of these each tuple should coincide with index.

@@ -1,11 +1,11 @@
 ---
 layout: default
+title: Physical Graph
 ---
 
-# Physical Graph
+The Physical Graph describes the topology in an abstract way and how the processing of the join happens. It can be either be created manually or be the result of an optimization process. A Physical Graph can then be transformed into a Storm Topology which can be run.
 
-The physical graph describes how the processing of the join happens.
-It is a directed graph with a bunch of labels. E.g. the following graph corresponds to the join between relations R and S:
+The Physical Graph is a directed graph with a bunch of labels. E.g., the following graph corresponds to the join between relations R and S:
 
 ![Ideal course of events]({{ "/pages/physical_graph/2way_example.png" | absolute_url }})
 
@@ -30,33 +30,6 @@ Currently, there are these rules available:
 * `JoinResultRule`: if a tuple arrives at the stream `incomingStreamName`, then join it using `predicates` and use emerging results as tuples for `relationName`.
 * `StreamSendRule`: if a new tuple for `relationName` is produced, send it to stream `outgoingStreamName`
 
-## Examples
-
-### BiStream
-
-For a BiStream like join between `r` and `s`, that results in relation `rs`, the following setup could be used:
-
-Nodes like above:
-
-* input for r
-* input for s
-* output for rs
-* r-store
-* s-store
-
-In order to store tuples from r at the r-store:
-
-* edge from input-r to the r-store with shuffle label
-* a XXXXXX store rule
-
-For probing tuples from r with previously arrived tuples at the s-store:
-
-* edge from input-r to the s-store with all label
-* a JoinResultRule at the s-store with the given predicate and relation rs
-
-Vice versa for tuples from s.
-
-
 ## Partitioning Methods
 
 Similar to Storm, in this Physical graph each node represents potentially multiple running instances and the edges between the nodes indicate communication flow. This means, we have to indicate, which message is sent to which instance of the component represented by a node.
@@ -65,3 +38,8 @@ This is specified by the partitioning method of the edge labels. The following p
 
 * shuffle: send it to any instance, round robin
 * all: send it to all instances, broadcast
+
+
+## Implementation Notes
+
+The physical graph lives in `package de.unikl.dbis.clash.physical`. The wrapper class to the internal components is the `PhysicalGraph`. It provides access to the internal nodes, connecting edges, and registered rules.
