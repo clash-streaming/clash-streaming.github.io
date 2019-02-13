@@ -7,7 +7,7 @@ The Physical Graph describes the topology in an abstract way and how the process
 
 The Physical Graph is a directed graph with a bunch of labels. E.g., the following graph corresponds to the join between relations R and S:
 
-![Ideal course of events]({{ "/pages/physical_graph/2way_example.png" | absolute_url }})
+![Ideal course of events]({{ "/pages/images/2way_example.png" | absolute_url }})
 
 Here we see the yellow stub-nodes that represent sources of data (e.g., the stream named `r` originates from node `input[r]`) and sinks where results are sent to (e.g., the stream named `rs` is produced at all nodes that have edges towards `output[rs]`).
 The blue nodes, here `r-store` and `s-store` are the locations where prefixes are stored. They are labeled with
