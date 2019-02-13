@@ -15,6 +15,8 @@ This optimizer generates a physical graph, which in an abstract way models a str
 
 ## Contents
 
+For consistent wording, refer to this document: [Glossary]({{ 'glossary' | absolute_url }})
+
 All pages of this documentation in no particular order:
 
 {% for p in site.pages %}

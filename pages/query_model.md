@@ -32,12 +32,11 @@ FROM alice a, bob b
 WHERE a.q = 1 AND a.r = b.s
 ```
 
-* **Input**: the name of an input relation. In the example, `alice` and `bob` are inputs. The system has to know how to get real data from these inputs, which is an orthogonal task to formulating a query.
-* **Alias**: the name of inputs used in the rest of the queries. In this case, `a` and `b`.
-* **Attribute**: Attributes of the relations, e.g. `x`, `y`, `q`, `r` and `s`. In order to avoid naming clashes, it is forbidden to use attributes without a qualifying alias.
-* **AttributeAccess**: The pair of alias and attribute, e.g. `('a', 'q')` in the predicate `a.q = 1`.
-* **UnaryPredicate**: A predicate with a single input, e.g. `a.q = 1`. These can be evaluated at ingestion of the inputs or maybe even pushed down into the data sources.
-* **BinaryPredicate**: A predicate with two inputs, e.g. `a.r = b.s`, here tuples from both relations, `a` and `b` are needed in order to evaluate the predicate
+{% assign querydef = "input,alias,attribute,attributeAccess,unaryPredicate,binaryPredicate" | split: "," %}
+{% for field in querydef %}
+{{ site.data.glossary.query[field].name }}
+: {{ site.data.glossary.query[field].def }}
+{% endfor %}
 
 ## Semantics and Relations
 
@@ -100,6 +99,11 @@ WHERE s.suppkey = o.suppkey
 
 **For ease of programming (and enforcing good style from the user ;)) in CLASH all attribute accesses in select and from clauses need to be qualified with the base relation or the alias of the base relation.**
 
+## Windows
+
+As shortly mentioned above, Clash allows the specification of windows. A window marks for an input how long tuples are valid and thus should be considered potential join partners. For the user this is a way to specify timeliness of relevant tuples. But more important, this is a method to make the infinite stream of data a finite bag of tuples.
+
+For now, we only support windows for input relations.
 
 ## Connection to the Outside World
 

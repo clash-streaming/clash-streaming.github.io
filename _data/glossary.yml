@@ -1,0 +1,29 @@
+query:
+  input:
+    name: BaseRelationName
+    def: The name of the Base Relation. In the example, `alice` and `bob` are inputs. The system has to know how to get real data from these inputs, which is an orthogonal task to formulating a query.
+  alias:
+    name: Alias
+    def: the name of inputs used in the rest of the queries. In this case, `a` and `b`. If no alias is specified, the BaseRelationName is used as alias.
+  attribute:
+    name: Attribute
+    def: Attributes of the relations, e.g. `x`, `y`, `q`, `r` and `s`. In order to avoid naming clashes, it is forbidden to use attributes without a qualifying alias.
+  attributeAccess:
+    name: AttributeAccess
+    def: The pair of alias and attribute, e.g. `('a', 'q')` in the predicate `a.q = 1`.
+  unaryPredicate:
+    name: UnaryPredicate
+    def: A predicate with a single input, e.g. `a.q = 1`. These can be evaluated at ingestion of the inputs or maybe even pushed down into the data sources.
+  binaryPredicate:
+    name: BinaryPredicate
+    def: A predicate with two inputs, e.g. `a.r = b.s`, here tuples from both relations, `a` and `b` are needed in order to evaluate the predicate
+optimization:
+  inputRelation:
+    name: InputRelation
+    def: Relations that are inputs, i.e., new tuples are created by reading them from external sources.
+  intermediateRelation:
+    name: Intermediate Relation
+    def: A relation which is created during processing inside Clash.
+  relationName:
+    name: RelationName
+    def: The name that relations (input or intermediate) have assigned. They should be unique. Names of InputRelations should coincide with the Alias they get assigned in the query.
