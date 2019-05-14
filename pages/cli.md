@@ -56,7 +56,7 @@ An erroneous query is detected:
 clashcli query -- "SELECT r.a, s.b FROM r, s, r.c = s.d"
 ```
 
-Yields:
+Yields this to stdout (also, catch stderr):
 
 ```json
 {
@@ -101,6 +101,35 @@ clashcli query -- "{}"
 ```
 
 you have to take care of proper escaping of quotes.
+
+## Running Storm
+
+With the command
+
+```bash
+clashcli storm
+```
+
+you can run storm. You can start a local test server using the `--local` flag as follows:
+
+```bash
+clashcli --local -- $QUERY $DATACHARACTERISTICS $OUTSIDEINTERFACE
+```
+
+Or run it on a remote nimbus using:
+
+```bash
+clashcli --nimbus dbis-exp1 --config config.yaml -- $QUERY $DATACHARACTERISTICS $OUTSIDEINTERFACE
+```
+
+**ATTENTION**: This running storm remotely assumes some things: First, there should be a jar without storm sources next to the jar you are running. For example, if the jar is named `clash-0.2.0.jar`, the jar without storm sources should be named `clash-0.2.0-stormCluster.jar`.
+
+The config you provide is optional, but will be used for setting up the topology. This is useful, e.g., for setting Postgres or Kafka connection options which are specific to the cluster you are running on but not the actual query.
+
+Further you have to provide arguments `$QUERY`, `$DATACHARACTERISTICS`, and `$OUTSIDEINTERFACE`. `$QUERY` is a query string as above. `$DATACHARACTERISTICS` is a JSON-String containing the data characteristics. `$OUTSIDEINTERFACE` explains how to wire up the spouts with data sources and the result bolt with data sinks, see [OutsideInterfaces]({{ 'pages/outside_interfaces' | absolute_url }}).
+
+
+
 
 ## Implementation Notes
 
