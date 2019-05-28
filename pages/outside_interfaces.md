@@ -61,3 +61,15 @@ Used for developing or testing. The Null source looks like:
 
 It does not sent any tuples to data sinks. However, it counts statistics and can thus be used in order to check, if all tuples make it through the topology and how long they take.
 
+### Postgres
+
+Used for developing or testing. The Postgres source looks like:
+
+```json
+{  
+   "type": "postgres",
+   "query": "INSERT INTO result(tuple) VALUES (?)"
+}
+```
+
+It inserts the tuples as plain JSON Strings using the query as provided.
