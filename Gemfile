@@ -4,9 +4,6 @@ gem 'jekyll', '~> 3.8.5'
 
 group :jekyll_plugins do
   gem 'hawkins','~> 2.0.5'    # live reload
-
-  gem 'jekyll-plantuml', '~> 1.3.3' # uml
-  gem 'jekyll-scholar', '~> 5.14.0' # bibtex
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
