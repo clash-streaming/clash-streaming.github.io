@@ -35,14 +35,14 @@ Then the current store is according to our model responsible for generating the 
 
 From a high level, the implementation looks like this:
 
-{% plantuml %}
+```
 class Storage {
     {field} local storage
     {field} probe buffer
     List<Tuple> store(Tuple)
     List<Tuple> probe(Tuple)
 }
-{% endplantuml %}
+```
 
 When a store tuple arrives, `sm.store(tuple)` is called, `tuple` is placed in the `local storage` and the join result with all "later" tuples from the `probe buffer` is returned. Vice versa, when a probe tuple arrives, `sm.probe(tuple)` is called, `tuple` is placed in the `probe buffer` and the join result with all previous tuples from the `local storage` is returned.
 
