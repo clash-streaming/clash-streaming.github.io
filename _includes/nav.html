@@ -1,21 +1,8 @@
-<nav class="nav navbar navbar-light bg-light">
-  <a class="nav-link" href={{"/" | absolute_url }}>Home</a>
-
-  <div class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href={{ "/pages/physical_graph" | absolute_url }}>Physical Graph</a>
-      <a class="dropdown-item" href={{ "/pages/sql" | absolute_url }}>SQL</a>
-    </div>
-  </div>
-
-  <div class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Further Aspects</a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <a class="dropdown-item" href={{"/pages/delayed_joins" | absolute_url }}>Delayed Joins</a>
-    </div>
-  </div>
-
-  <a class="nav-link" href={{"/glossary" | absolute_url }}>Glossary</a>
-  <a class="nav-link" href={{"/literature" | absolute_url }}>Literature</a>
+<nav>
+  <ul>
+    <li><a href={{ "/" | absolute_url }}>Home</a></li>
+    <li><a href={{ "/pages/physical_graph" | absolute_url }}>Physical Graph</a></li>
+    <li><a href={{ "/pages/sql" | absolute_url }}>SQL</a></li>
+    <li><a href={{ "/pages/delayed_joins" | absolute_url }}>Delayed Joins</a></li>
+  </ul>
 </nav>

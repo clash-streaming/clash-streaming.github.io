@@ -1,0 +1,34 @@
+header {
+  background-color: $background-color;
+  width: $page_width;
+  height: $header_height;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2*$spacing;
+
+  .logo {
+
+  }
+
+  nav {
+    ul {
+      display: flex;
+      flex-direction: row;
+      
+      li {
+        list-style-type: none;
+        margin-left: $spacing;
+      }
+
+      a {
+        color: $yellow;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $yellow;
+          color: $background-color;
+        }
+      }
+    }
+  }
+}

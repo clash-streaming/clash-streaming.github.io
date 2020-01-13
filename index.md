@@ -19,12 +19,13 @@ For consistent wording, refer to this document: [Glossary]({{ 'glossary' | absol
 
 All pages of this documentation in no particular order:
 
+<ul>
 {% for p in site.pages %}
 {% if p.url contains 'pages' %}
-* [{{ p.title }}]({{ p.url | absolute_url }})
+<li><a href="{{ p.url | absolute_url }}">{{ p.title }}</a></li>
 {% endif %}
 {% endfor %}
-
+</ul>
 
 ## Future Work
 
