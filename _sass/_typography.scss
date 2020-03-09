@@ -2,10 +2,23 @@
   font-family: Helvetica
 }
 
-h1, h2, h3, h4, h5, h6, p, ul {
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
   margin-bottom: $spacing;
 }
 
 ul {
   margin-left: $spacing;
+}
+
+div.highlight {
+  margin-bottom: $spacing
+}
+
+dl {
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    padding-left: $spacing;
+  }
 }

@@ -32,7 +32,7 @@ FROM alice a, bob b
 WHERE a.q = 1 AND a.r = b.s
 ```
 
-{% assign querydef = "input,alias,attribute,attributeAccess,unaryPredicate,binaryPredicate" | split: "," %}
+{% assign querydef = "inputName,alias,attribute,attributeAccess,filterPredicate,joinPredicate" | split: "," %}
 {% for field in querydef %}
 {{ site.data.glossary.query[field].name }}
 : {{ site.data.glossary.query[field].def }}
