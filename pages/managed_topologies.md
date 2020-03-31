@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Managed Topologies
+major_category: Internals
 ---
 
 A managed topology is managed by the manager.

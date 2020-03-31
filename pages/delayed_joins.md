@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Out-of-Order Join Execution
+major_category: Internals
 ---
 
 Given a store $R_i$ with arriving probe tuples $s_1, \dots, s_n$.

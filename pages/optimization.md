@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Optimization
+major_category: Internals
 ---
 
 The Optimization process is responsible for creating a PhysicalGraph from a Query. The only outside information an Optimizer is allowed to use are captured in the data class `OptimizationParameters`.

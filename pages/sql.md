@@ -1,6 +1,7 @@
 ---
 layout: default
 title: CLASH's SQL Dialect
+major_category: User Facing
 ---
 
 We support queries of type

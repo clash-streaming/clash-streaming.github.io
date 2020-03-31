@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Physical Graph
+major_category: Internals
 ---
 
 The Physical Graph describes the topology in an abstract way and how the processing of the join happens. It can be either be created manually or be the result of an optimization process. A Physical Graph can then be transformed into a Storm Topology which can be run.

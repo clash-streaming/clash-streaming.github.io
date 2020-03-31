@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Command Line Interface
+major_category: User Facing
 ---
 
 You can use CLASH via the command line interface embedded into the built jarfile. Alias `clashcli` to `java -jar $PATH_TO_CASH_JAR` if you want it quicker.

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Code Structure
+major_category: Internals
 ---
 
 This is an older illustration of Clash's structure, however, it should still give a hint on how things are organized.

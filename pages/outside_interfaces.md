@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Outside Interfaces
+major_category: User Facing
 ---
 
 An outside interface consists of sources and sinks. It is used to tell CLASH, which spouts to instantiate and with which parameters as well as how the result bolt should communicate its results with the sink.

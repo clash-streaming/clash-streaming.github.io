@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Metrics
+major_category: Internals
 ---
 
 CLASH for Storm writes metrics in order to asses the performance.

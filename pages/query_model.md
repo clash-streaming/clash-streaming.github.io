@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Queries and Relations
+major_category: Internals
 ---
 
 Queries in Clash are declarative. The user is in principle only allowed to explain **what** they want to have and Clash decides **how** this result is produced.
@@ -39,6 +40,27 @@ WHERE a.q = 1 AND a.r = b.s
 {% endfor %}
 
 ## Semantics and Relations
+
+We interpret a **(streamed) relation** as a specification of **tuples**. This specification describes:
+
+inputs
+: where do input tuples come from? (real inputs or other relations) This includes window definitions.
+
+filters
+: which filterPredicates are applied to the inputs?
+
+joinPredicates
+: how are multiple inputs joined together?
+
+aggregations
+: defines how aggregated values are derived
+
+projections
+: list of attribute accesses that should be included in the output
+
+alias
+: a name for the generated relation
+
 
 With such a query, a **Relation** is defined. The description of a relation comprises of the inputs, and the predicates (unary and binary). The tuples in this relation adhere the predicates.
 

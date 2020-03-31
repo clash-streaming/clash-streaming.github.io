@@ -1,6 +1,7 @@
 ---
 layout: default
 title: On Inputs and Aliases
+major_category: Internals
 ---
 
 Inputs have names. Aliases are names. However, they remain separate.
