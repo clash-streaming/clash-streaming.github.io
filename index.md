@@ -1,6 +1,10 @@
 ---
-layout: default
+layout: index
 ---
+
+# CLASH
+
+CLASH is a research project dedicated to query processing over semi-relational streams.
 
 # Welcome to CLASH
 

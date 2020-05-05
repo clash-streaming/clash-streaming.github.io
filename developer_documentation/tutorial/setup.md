@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Tutorial: Setup"
-major_category: User Facing
+title: Setup
+major_category: Tutorial
 ---
 
 (Note, that this tutorial is intended for students of [TUK](https://www.uni-kl.de/).)

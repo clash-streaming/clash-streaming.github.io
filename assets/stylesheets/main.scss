@@ -2,24 +2,10 @@
 ---
 @charset "utf-8";
 
-$background-color: #000033;
-$logo_yellow: #34e8aa;
-$logo_green: #daff32;
-$yellow: #ffff33;
-$page_width: 800px;
-$header_height: 80px;
-$spacing: 16px;
-
 @import "reset";
-@import "typography";
-@import "header";
+@import "colors";
+// @import "header";
 
 @import "bootstrap/functions";
 @import "bootstrap_variables";
 @import "bootstrap/bootstrap";
-
-main {
-  width: $page_width;
-  margin-left: auto;
-  margin-right: auto;
-}

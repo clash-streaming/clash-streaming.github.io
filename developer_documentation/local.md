@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: documentation
 title: Local execution
+major_category: Internals
 ---
 
 Local execution is a mode where a single threaded program runs a physical graph. This is great for testing and debugging.

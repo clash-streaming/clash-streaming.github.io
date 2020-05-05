@@ -4,16 +4,8 @@
   {% include head.html %}
 
   <body>
-    <header>
-      {% include nav.html %}
-    </header>
-
-    <main>
-      {% if page.title %}<h1>{{ page.title }}</h1>{% endif %}
-
-      {{ content }}
-    </main>
-
+    {{ content }}
+    
     {% include foot.html %}
   </body>
 </html>
