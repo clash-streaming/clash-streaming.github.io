@@ -14,6 +14,10 @@ $spacing: 16px;
 @import "typography";
 @import "header";
 
+@import "bootstrap/functions";
+@import "bootstrap_variables";
+@import "bootstrap/bootstrap";
+
 main {
   width: $page_width;
   margin-left: auto;
