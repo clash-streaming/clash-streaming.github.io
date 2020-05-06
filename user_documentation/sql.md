@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: CLASH's SQL Dialect
 major_category: User Facing
 ---

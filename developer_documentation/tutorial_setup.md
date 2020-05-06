@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Setup
 major_category: Tutorial
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Physical Graph
 major_category: Internals
 ---

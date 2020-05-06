@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Command Line Interface
 major_category: User Facing
 ---

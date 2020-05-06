@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Outside Interfaces
 major_category: User Facing
 ---

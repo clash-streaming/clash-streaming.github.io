@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Queries and Relations
 major_category: Internals
 ---

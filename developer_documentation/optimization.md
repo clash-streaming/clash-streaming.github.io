@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Optimization
 major_category: Internals
 ---

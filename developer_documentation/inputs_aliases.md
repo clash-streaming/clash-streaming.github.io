@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: On Inputs and Aliases
 major_category: Internals
 ---

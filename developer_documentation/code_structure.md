@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation
 title: Code Structure
 major_category: Tutorial
 ---
