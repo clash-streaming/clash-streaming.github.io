@@ -14,3 +14,7 @@ This family of optimization strategies combines inputs in a n-ary tree form. Eac
 ### FlatTheta
 
 This strategy creates tree with a root node where all children are leaves, thus the term flat. Because it does not materialize any intermediate result, its storage consumption is minimal. That comes at the cost of needing to re-construct intermediate results.
+
+### FlatPartitioned
+
+This strategy also creates a flat tree, however it can additionally create the stores in a partitioned way, thus exploit equality
